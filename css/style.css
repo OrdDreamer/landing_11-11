@@ -750,15 +750,29 @@ footer {
 }
 
 .marketplaces__container {
-}
+  padding: 48px 96px;
 
-.marketplaces__title {
+  @media screen and (min-width: 768px) {
+    padding: 48px 0 132px;
+  }
 }
 
 .marketplaces__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 60px;
+
+  @media screen and (min-width: 768px) {
+    gap: 16px 80px;
+  }
 }
 
 .marketplaces__item {
+  height: 64px;
+  width: auto;
+  max-height: 64px;
 }
 
 .marketplaces__logo {
