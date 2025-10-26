@@ -792,10 +792,10 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 60px;
-  animation: scroll 60s linear infinite;
-  white-space: nowrap;
   width: max-content;
+  white-space: nowrap;
   transform: translateX(0%);
+  animation: scroll 60s linear infinite;
 
   @media screen and (min-width: 768px) {
     gap: 80px;
@@ -805,13 +805,13 @@ footer {
 
 .marketplaces__item {
   flex-shrink: 0;
-  height: 64px;
   width: auto;
+  height: 64px;
   max-height: 64px;
 }
 
 .marketplaces__logo {
-  height: 100%;
   width: auto;
+  height: 100%;
   object-fit: contain;
 }
