@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="uk">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,15 +17,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
 
   <link rel="canonical" href="https://meest-shop.com/landing">
 
   <!--  TODO: update open graph if needed-->
   <!-- === OPEN GRAPH / FACEBOOK / TELEGRAM === -->
   <meta property="og:title" content="11.11 – головний день знижок у Китаї!">
-  <meta property="og:description"
-        content="Зроби найвигідніші покупки року разом із Meest China: знижки до 70%, широкий вибір товарів і повний супровід доставки в Україну.">
+  <meta
+    property="og:description"
+    content="Зроби найвигідніші покупки року разом із Meest China: знижки до 70%, широкий вибір товарів і повний супровід доставки в Україну."
+  >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://meest-shop.com/landing">
   <meta property="og:image" content="https://meest-shop.com/img/og-image.jpg">
@@ -54,426 +57,410 @@
 </head>
 
 <body>
-<header class="header" id="header">
-  <div class="header__container container">
-    <a class="header__logo" href="/" aria-label="Meest China Shop – перейти на головну сторінку">
-      <img src="/img/logo.svg" alt="" width="100" height="48">
+  <header class="header" id="header">
+    <div class="header__container container">
+      <a class="header__logo" href="/" aria-label="Meest China Shop – перейти на головну сторінку">
+        <img src="/img/logo.svg" alt="" width="100" height="48">
+      </a>
+
+      <button class="header__burger only-mobile" id="burger-btn" type="button" aria-label="Відкрити меню"
+        aria-controls="mobile-menu" aria-expanded="false">
+        <img src="/img/icons/menu.svg" alt="" width="48" height="48" aria-hidden="true">
+      </button>
+
+      <nav class="header__nav only-desktop" aria-label="Головна навігація">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#top-discount-products" class="header__nav-link">Пропозиції</a></li>
+          <li class="header__nav-item"><a href="#how-to-order" class="header__nav-link">Як замовити</a></li>
+          <li class="header__nav-item"><a href="#why-us" class="header__nav-link">Переваги</a></li>
+        </ul>
+      </nav>
+
+      <!-- TODO: update link -->
+      <a class="header__language-switcher only-desktop" href="/ru/landing" lang="ru"
+        aria-label="Змінити мову сторінки на російську">
+        <img src="/img/icons/world.svg" alt="" width="24" height="24" aria-hidden="true">
+        <img class="header__language-switcher-next-icon" src="/img/icons/arrow_right_blue.svg" alt="" width="24"
+          height="24" aria-hidden="true">
+        <span>RU</span>
+      </a>
+
+      <a class="header__cta-button only-desktop" href="https://meest-shop.com/#services_id" target="_blank"
+        rel="noopener">Замовити</a>
+    </div>
+
+  </header>
+
+  <!-- Мобільне меню -->
+  <div class="mobile-menu only-mobile" id="mobile-menu">
+    <div class="mobile-menu__header">
+      <a class="mobile-menu__logo" href="/" aria-label="Meest China Shop – перейти на головну сторінку">
+        <img src="/img/logo.svg" alt="" width="100" height="48">
+      </a>
+      <button class="mobile-menu__close" id="mobile-menu-close" type="button" aria-label="Закрити меню">
+        <img src="/img/icons/close.svg" alt="" width="48" height="48" aria-hidden="true">
+      </button>
+    </div>
+
+    <a class="mobile-menu__cta-button" href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">
+      Замовити
     </a>
 
-    <button
-      class="header__burger only-mobile"
-      id="burger-btn"
-      type="button"
-      aria-label="Відкрити меню"
-      aria-controls="mobile-menu"
-      aria-expanded="false"
-    >
-      <img
-        src="/img/icons/menu.svg"
-        alt=""
-        width="48"
-        height="48"
-        aria-hidden="true"
-      >
-    </button>
-
-    <nav class="header__nav only-desktop" aria-label="Головна навігація">
-      <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="#top-discount-products" class="header__nav-link">Пропозиції</a></li>
-        <li class="header__nav-item"><a href="#how-to-order" class="header__nav-link">Як замовити</a></li>
-        <li class="header__nav-item"><a href="#why-us" class="header__nav-link">Переваги</a></li>
+    <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
+      <ul class="mobile-menu__nav-list">
+        <li class="mobile-menu__nav-item">
+          <a href="#top-discount-products" class="mobile-menu__nav-link">Пропозиції</a>
+        </li>
+        <li class="mobile-menu__nav-item">
+          <a href="#how-to-order" class="mobile-menu__nav-link">Як замовити</a>
+        </li>
+        <li class="mobile-menu__nav-item">
+          <a href="#why-us" class="mobile-menu__nav-link">Переваги</a>
+        </li>
       </ul>
     </nav>
 
     <!-- TODO: update link -->
-    <a
-      class="header__language-switcher only-desktop"
-      href="/ru/landing"
-      lang="ru"
-      aria-label="Змінити мову сторінки на російську"
-    >
-      <img
-        src="/img/icons/world.svg"
-        alt=""
-        width="24"
-        height="24"
-        aria-hidden="true"
-      >
-      <img
-        class="header__language-switcher-next-icon"
-        src="/img/icons/arrow_right_blue.svg"
-        alt=""
-        width="24"
-        height="24"
-        aria-hidden="true"
-      >
-      <span>RU</span>
+    <a class="mobile-menu__language-link" href="/ru/landing" lang="ru" aria-label="Змінити мову сторінки на російську">
+      <img src="/img/icons/translate.svg" alt="" width="24" height="24" aria-hidden="true">
+      Змінити мову
     </a>
-
-    <a class="header__cta-button only-desktop" href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">Замовити</a>
   </div>
 
-</header>
+  <main>
+    <section class="hero" id="hero">
+      <h1 class="hero__title">
+        <span class="hero__title-accent">11.11</span> – головний день знижок у Китаї!
+      </h1>
 
-<!-- Мобільне меню -->
-<div class="mobile-menu only-mobile" id="mobile-menu">
-  <div class="mobile-menu__header">
-    <a class="mobile-menu__logo" href="/" aria-label="Meest China Shop – перейти на головну сторінку">
-      <img src="/img/logo.svg" alt="" width="100" height="48">
+      <p class="hero__description">
+        Зроби найвигідніші покупки року разом із Meest China: знижки до 70%, широкий вибір товарів і повний супровід
+        доставки в Україну
+      </p>
+
+      <div class="hero__timer" id="timer" aria-live="off" role="timer">
+        <p class="hero__timer-item">
+          <span class="hero__timer-value" id="timer-days">00</span>
+          <span class="hero__timer-label">днів</span>
+        </p>
+        <p class="hero__timer-separator">:</p>
+        <p class="hero__timer-item">
+          <span class="hero__timer-value" id="timer-hours">00</span>
+          <span class="hero__timer-label">годин</span>
+        </p>
+        <p class="hero__timer-separator">:</p>
+        <p class="hero__timer-item">
+          <span class="hero__timer-value" id="timer-minutes">00</span>
+          <span class="hero__timer-label">хвилин</span>
+        </p>
+        <p class="hero__timer-separator">:</p>
+        <p class="hero__timer-item">
+          <span class="hero__timer-value" id="timer-seconds">00</span>
+          <span class="hero__timer-label">секунд</span>
+        </p>
+      </div>
+
+      <a class="hero__cta-button" href="https://meest-shop.com/categories" rel="noopener" target="_blank">
+        <span>До каталогу</span>
+        <img class="hero__cta-icon" src="/img/icons/arrow_right.svg" alt="" aria-hidden="true" loading="lazy" width="24"
+          height="24">
+      </a>
+
+      <img class="hero__illustration-mobile" src="/img/section-hero/illustration-mobile.png" alt="" aria-hidden="true"
+        loading="lazy" width="328" height="368">
+    </section>
+
+    <section id="marketplaces" aria-labelledby="marketplaces-heading">
+      <h2 id="marketplaces-heading">Маркетплейси, з яких можна замовляти через нас</h2>
+      <ul>
+        <li>
+          <img src="/img/marketplaces/1688.png" alt="Маркетплейс 1688" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/taobao.png" alt="Маркетплейс Taobao" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/amazon.png" alt="Маркетплейс Amazon.co.jp" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/beautynetkorea.png" alt="Маркетплейс BeautyNetKorea" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/biccamera.png" alt="Маркетплейс BIC Camera" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/gmarket.png" alt="Маркетплейс Gmarket" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/oliveyoung.png" alt="Маркетплейс Olive Young" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/pinduoduo.png" alt="Маркетплейс Pinduoduo" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/poizon.png" alt="Маркетплейс Poizon" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/rakuten.png" alt="Маркетплейс Rakuten" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/yes24.png" alt="Маркетплейс Yes24" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/yodobashi.png" alt="Маркетплейс Yodobashi" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/zozo.png" alt="Маркетплейс Zozo" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/weidian.png" alt="Маркетплейс Weidian" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/uniqlo.png" alt="Маркетплейс UNIQLO" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/muji.png" alt="Маркетплейс MUJI" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/jd.png" alt="Маркетплейс JD.com" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/naver.png" alt="Маркетплейс Naver Shopping" loading="lazy">
+        </li>
+        <li>
+          <img src="/img/marketplaces/atomy.png" alt="Маркетплейс Atomy" loading="lazy">
+        </li>
+      </ul>
+    </section>
+
+    <section id="top-discount-products" aria-labelledby="top-discount-products-title">
+      <h2 id="top-discount-products-title">
+        Топ-товари зі знижками <strong>11.11</strong>
+      </h2>
+      <p>
+        Обирайте найпопулярніші товари з кращими цінами від постачальників Китаю, Південної Кореї та Японії. Плануйте
+        закупівлі на 11.11 — поповнюйте асортимент із мінімальними витратами
+      </p>
+      <ul>
+        <li>
+          <a href="https://meest-shop.com/product/taobao/658049868323">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
+              <h3>Різдвяні прикраси</h3>
+              <p>$ 2,49</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/alibaba1688/860084273119">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
+              <h3>Штучна ялинка</h3>
+              <p>$ 12,4</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/alibaba1688/955301221589">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
+              <h3>Різдвяні статуетки</h3>
+              <p>$ 7,34</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/alibaba1688/955301221589">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy">
+              <h3>Гірлянда-роса</h3>
+              <p>$ 5,58</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/alibaba1688/842917068211">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
+              <h3>Зарядна станція</h3>
+              <p>$ 87,96</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/taobao/972189321832">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy">
+              <h3>3D фоторамка</h3>
+              <p>$ 8,74</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/taobao/891839266306">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
+              <h3>Робот-пилосос</h3>
+              <p>$ 62,56</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/taobao/768106751900">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy">
+              <h3>Іграшка для собак</h3>
+              <p>$ 1,5</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/taobao/754357488243">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
+              <h3>Міні-поїлка для тварин</h3>
+              <p>$ 1,34</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/taobao/889662102293">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy">
+              <h3>Повідець для собак</h3>
+              <p>$ 2,38</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/taobao/877236140259">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
+              <h3>Робот-пилосос</h3>
+              <p>$ 84,14</p>
+            </article>
+          </a>
+        </li>
+        <li>
+          <a href="https://meest-shop.com/product/alibaba1688/744512145406">
+            <article>
+              <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
+              <h3>Блок живлення</h3>
+              <p>$ 161,38</p>
+            </article>
+          </a>
+        </li>
+      </ul>
+      <a href="https://meest-shop.com/categories" target="_blank" rel="noopener"
+        aria-label="Перейти до каталогу товарів">
+        <span>Більше товарів</span>
+        <img src="/img/arrow-right.svg" alt="" aria-hidden="true" loading="lazy">
+      </a>
+    </section>
+
+    <section id="promo-11-11" aria-labelledby="promo-11-11-title">
+      <h2 id="promo-11-11-title"><span>Ідеальний</span> час для <span>масштабних</span> закупівель</h2>
+
+      <p>
+        <span>11.11</span> — це щорічний глобальний розпродаж, який стартував у Китаї на Alibaba та Taobao, і вже став
+        найбільшою подією у світі онлайн-шопінгу
+      </p>
+
+      <p>Основні переваги акції:</p>
+      <ul>
+        <li>Найнижчі ціни року</li>
+        <li>Новинки</li>
+        <li>Ексклюзивні товари</li>
+        <li>Вигідні закупівлі</li>
+        <li>Опт і роздріб</li>
+        <li>Без посередників</li>
+        <li>Зручна доставка</li>
+        <li>Повний супровід</li>
+      </ul>
+
+      <a href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">
+        <span>Почати купувати</span>
+        <img src="/img/arrow-right.svg" alt="" loading="lazy" aria-hidden="true">
+      </a>
+    </section>
+
+    <section id="how-to-order" aria-labelledby="how-to-order-title">
+      <h2 id="how-to-order-title">Як оформити замовлення</h2>
+
+      <ol>
+        <li>Оберіть потрібні товари на Taobao, Tmall, JD чи інших азійських сайтах.</li>
+        <li>Надайте нам посилання через форму на сайті.</li>
+        <li>Ми викупимо товар напряму у продавця, перевіримо якість та організуємо доставку.</li>
+        <li>Ви отримаєте замовлення в Україні без зайвих турбот.</li>
+      </ol>
+
+      <a href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">
+        <span>Зробити замовлення</span>
+        <img src="/img/arrow-right.svg" alt="" loading="lazy" aria-hidden="true">
+      </a>
+    </section>
+
+    <section id="why-us" aria-labelledby="why-us-title">
+      <h2 id="why-us-title">Чому варто обрати нас</h2>
+
+      <article>
+        <h3>Купівля напряму в Китаї</h3>
+        <p>Ви купуєте товар у виробника, без зайвих посередників.</p>
+        <img src="/img/sections/why-us/" alt="" aria-hidden="true" loading="lazy">
+      </article>
+
+      <ul>
+        <li>
+          <h3>Каталог товарів</h3>
+          <p>Знаходьте все необхідне в одному місці.</p>
+        </li>
+        <li>
+          <h3>Перевірка якості</h3>
+          <p>Ваші товари перевіряються на складі перед відправкою.</p>
+        </li>
+        <li>
+          <h3>Легке повернення</h3>
+          <p>У разі невідповідності товару, ми самі повертаємо його продавцю.</p>
+        </li>
+        <li>
+          <h3>Зручна доставка</h3>
+          <p>Морем, авіа або авто — обирайте, що підходить саме вам.</p>
+        </li>
+        <li>
+          <h3>Повний супровід</h3>
+          <p>Від пошуку товару до розмитнення й доставки в Україну.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="call-to-action" class="cta" aria-labelledby="cta-title">
+      <h2 id="cta-title">Використайте 11.11 на максимум!</h2>
+      <a href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">
+        <span>Замовити</span>
+        <img src="/img/arrow-right.svg" alt="" loading="lazy" aria-hidden="true">
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/" aria-label="Meest China Shop – перейти на головну сторінку">
+      <img src="/img/logo.svg" alt="">
     </a>
-    <button
-      class="mobile-menu__close"
-      id="mobile-menu-close"
-      type="button"
-      aria-label="Закрити меню"
-    >
-      <img
-        src="/img/icons/close.svg"
-        alt=""
-        width="48"
-        height="48"
-        aria-hidden="true"
-      >
-    </button>
-  </div>
 
-  <a class="mobile-menu__cta-button" href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">
-    Замовити
-  </a>
-
-  <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
-    <ul class="mobile-menu__nav-list">
-      <li class="mobile-menu__nav-item">
-        <a href="#top-discount-products" class="mobile-menu__nav-link">Пропозиції</a>
-      </li>
-      <li class="mobile-menu__nav-item">
-        <a href="#how-to-order" class="mobile-menu__nav-link">Як замовити</a>
-      </li>
-      <li class="mobile-menu__nav-item">
-        <a href="#why-us" class="mobile-menu__nav-link">Переваги</a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- TODO: update link -->
-  <a class="mobile-menu__language-link" href="/ru/landing" lang="ru" aria-label="Змінити мову сторінки на російську">
-    <img
-      src="/img/icons/translate.svg"
-      alt=""
-      width="24"
-      height="24"
-      aria-hidden="true"
-    >
-    Змінити мову
-  </a>
-</div>
-
-<main>
-  <section id="hero">
-    <h1><strong>11.11</strong> – головний день знижок у Китаї!</h1>
+    <nav aria-label="Навігація у футері">
+      <ul>
+        <li><a href="#top-discount-products">Пропозиції</a></li>
+        <li><a href="#how-to-order">Як замовити</a></li>
+        <li><a href="#why-us">Переваги</a></li>
+      </ul>
+    </nav>
 
     <p>
-      Зроби найвигідніші покупки року разом із Meest China: знижки до 70%, широкий вибір товарів і повний супровід
-      доставки в Україну
+      <span>© 2024 Powered by © Meest Group. </span>
+      <span>All rights reserved.</span>
     </p>
-
-    <div id="timer" aria-live="off" role="timer"></div>
-
-    <a href="https://meest-shop.com/categories" target="_blank" rel="noopener">
-      <span>До каталогу</span>
-      <img src="/img/arrow-right.svg" alt="" aria-hidden="true" loading="lazy">
-    </a>
-  </section>
-
-  <section id="marketplaces" aria-labelledby="marketplaces-heading">
-    <h2 id="marketplaces-heading">Маркетплейси, з яких можна замовляти через нас</h2>
-    <ul>
-      <li>
-        <img src="/img/marketplaces/1688.png" alt="Маркетплейс 1688" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/taobao.png" alt="Маркетплейс Taobao" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/amazon.png" alt="Маркетплейс Amazon.co.jp" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/beautynetkorea.png" alt="Маркетплейс BeautyNetKorea" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/biccamera.png" alt="Маркетплейс BIC Camera" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/gmarket.png" alt="Маркетплейс Gmarket" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/oliveyoung.png" alt="Маркетплейс Olive Young" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/pinduoduo.png" alt="Маркетплейс Pinduoduo" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/poizon.png" alt="Маркетплейс Poizon" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/rakuten.png" alt="Маркетплейс Rakuten" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/yes24.png" alt="Маркетплейс Yes24" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/yodobashi.png" alt="Маркетплейс Yodobashi" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/zozo.png" alt="Маркетплейс Zozo" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/weidian.png" alt="Маркетплейс Weidian" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/uniqlo.png" alt="Маркетплейс UNIQLO" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/muji.png" alt="Маркетплейс MUJI" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/jd.png" alt="Маркетплейс JD.com" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/naver.png" alt="Маркетплейс Naver Shopping" loading="lazy">
-      </li>
-      <li>
-        <img src="/img/marketplaces/atomy.png" alt="Маркетплейс Atomy" loading="lazy">
-      </li>
-    </ul>
-  </section>
-
-  <section id="top-discount-products" aria-labelledby="top-discount-products-title">
-    <h2 id="top-discount-products-title">
-      Топ-товари зі знижками <strong>11.11</strong>
-    </h2>
-    <p>
-      Обирайте найпопулярніші товари з кращими цінами від постачальників Китаю, Південної Кореї та Японії. Плануйте
-      закупівлі на 11.11 — поповнюйте асортимент із мінімальними витратами
-    </p>
-    <ul>
-      <li>
-        <a href="https://meest-shop.com/product/taobao/658049868323">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
-            <h3>Різдвяні прикраси</h3>
-            <p>$ 2,49</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/alibaba1688/860084273119">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
-            <h3>Штучна ялинка</h3>
-            <p>$ 12,4</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/alibaba1688/955301221589">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
-            <h3>Різдвяні статуетки</h3>
-            <p>$ 7,34</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/alibaba1688/955301221589">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy">
-            <h3>Гірлянда-роса</h3>
-            <p>$ 5,58</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/alibaba1688/842917068211">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
-            <h3>Зарядна станція</h3>
-            <p>$ 87,96</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/taobao/972189321832">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy">
-            <h3>3D фоторамка</h3>
-            <p>$ 8,74</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/taobao/891839266306">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
-            <h3>Робот-пилосос</h3>
-            <p>$ 62,56</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/taobao/768106751900">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy">
-            <h3>Іграшка для собак</h3>
-            <p>$ 1,5</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/taobao/754357488243">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
-            <h3>Міні-поїлка для тварин</h3>
-            <p>$ 1,34</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/taobao/889662102293">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy">
-            <h3>Повідець для собак</h3>
-            <p>$ 2,38</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/taobao/877236140259">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
-            <h3>Робот-пилосос</h3>
-            <p>$ 84,14</p>
-          </article>
-        </a>
-      </li>
-      <li>
-        <a href="https://meest-shop.com/product/alibaba1688/744512145406">
-          <article>
-            <img src="/img/products/" alt="" loading="lazy" aria-hidden="true">
-            <h3>Блок живлення</h3>
-            <p>$ 161,38</p>
-          </article>
-        </a>
-      </li>
-    </ul>
-    <a href="https://meest-shop.com/categories" target="_blank" rel="noopener" aria-label="Перейти до каталогу товарів">
-      <span>Більше товарів</span>
-      <img src="/img/arrow-right.svg" alt="" aria-hidden="true" loading="lazy">
-    </a>
-  </section>
-
-  <section id="promo-11-11" aria-labelledby="promo-11-11-title">
-    <h2 id="promo-11-11-title"><span>Ідеальний</span> час для <span>масштабних</span> закупівель</h2>
-
-    <p>
-      <span>11.11</span> — це щорічний глобальний розпродаж, який стартував у Китаї на Alibaba та Taobao, і вже став
-      найбільшою подією у світі онлайн-шопінгу
-    </p>
-
-    <p>Основні переваги акції:</p>
-    <ul>
-      <li>Найнижчі ціни року</li>
-      <li>Новинки</li>
-      <li>Ексклюзивні товари</li>
-      <li>Вигідні закупівлі</li>
-      <li>Опт і роздріб</li>
-      <li>Без посередників</li>
-      <li>Зручна доставка</li>
-      <li>Повний супровід</li>
-    </ul>
-
-    <a href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">
-      <span>Почати купувати</span>
-      <img src="/img/arrow-right.svg" alt="" loading="lazy" aria-hidden="true">
-    </a>
-  </section>
-
-  <section id="how-to-order" aria-labelledby="how-to-order-title">
-    <h2 id="how-to-order-title">Як оформити замовлення</h2>
-
-    <ol>
-      <li>Оберіть потрібні товари на Taobao, Tmall, JD чи інших азійських сайтах.</li>
-      <li>Надайте нам посилання через форму на сайті.</li>
-      <li>Ми викупимо товар напряму у продавця, перевіримо якість та організуємо доставку.</li>
-      <li>Ви отримаєте замовлення в Україні без зайвих турбот.</li>
-    </ol>
-
-    <a href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">
-      <span>Зробити замовлення</span>
-      <img src="/img/arrow-right.svg" alt="" loading="lazy" aria-hidden="true">
-    </a>
-  </section>
-
-  <section id="why-us" aria-labelledby="why-us-title">
-    <h2 id="why-us-title">Чому варто обрати нас</h2>
-
-    <article>
-      <h3>Купівля напряму в Китаї</h3>
-      <p>Ви купуєте товар у виробника, без зайвих посередників.</p>
-      <img src="/img/sections/why-us/" alt="" aria-hidden="true" loading="lazy">
-    </article>
-
-    <ul>
-      <li>
-        <h3>Каталог товарів</h3>
-        <p>Знаходьте все необхідне в одному місці.</p>
-      </li>
-      <li>
-        <h3>Перевірка якості</h3>
-        <p>Ваші товари перевіряються на складі перед відправкою.</p>
-      </li>
-      <li>
-        <h3>Легке повернення</h3>
-        <p>У разі невідповідності товару, ми самі повертаємо його продавцю.</p>
-      </li>
-      <li>
-        <h3>Зручна доставка</h3>
-        <p>Морем, авіа або авто — обирайте, що підходить саме вам.</p>
-      </li>
-      <li>
-        <h3>Повний супровід</h3>
-        <p>Від пошуку товару до розмитнення й доставки в Україну.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="call-to-action" class="cta" aria-labelledby="cta-title">
-    <h2 id="cta-title">Використайте 11.11 на максимум!</h2>
-    <a href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">
-      <span>Замовити</span>
-      <img src="/img/arrow-right.svg" alt="" loading="lazy" aria-hidden="true">
-    </a>
-  </section>
-</main>
-
-<footer>
-  <a href="/" aria-label="Meest China Shop – перейти на головну сторінку">
-    <img src="/img/logo.svg" alt="">
-  </a>
-
-  <nav aria-label="Навігація у футері">
-    <ul>
-      <li><a href="#top-discount-products">Пропозиції</a></li>
-      <li><a href="#how-to-order">Як замовити</a></li>
-      <li><a href="#why-us">Переваги</a></li>
-    </ul>
-  </nav>
-
-  <p>
-    <span>© 2024 Powered by © Meest Group. </span>
-    <span>All rights reserved.</span>
-  </p>
-</footer>
-<script src="js/app.js"></script>
+  </footer>
+  <script src="js/app.js"></script>
 </body>
+
 </html>
