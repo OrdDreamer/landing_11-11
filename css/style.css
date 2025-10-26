@@ -76,9 +76,9 @@
 }
 
 .container {
-  margin: 0 auto;
   width: 100%;
   max-width: var(--container-xs);
+  margin: 0 auto;
 
   /* Breakpoints */
   @media (min-width: 576px) {
@@ -115,9 +115,9 @@
 
 ul,
 li {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 p {
@@ -125,8 +125,8 @@ p {
 }
 
 html {
-  font-family: "Montserrat", sans-serif;
   color: #0a2432;
+  font-family: "Montserrat", sans-serif;
 }
 
 ::-moz-selection {
@@ -141,31 +141,31 @@ html {
 
 hr {
   display: block;
+  width: 100%;
   height: 1px;
+  margin: 0;
+  padding: 0;
   border: 0;
   border-top: 1px solid var(--grey-1);
-  padding: 0;
-  margin: 0;
-  width: 100%;
 }
 
 .visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
+  position: absolute;
+  width: 1px;
   height: 1px;
   margin: -1px;
-  overflow: hidden;
   padding: 0;
-  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  width: 1px;
+  border: 0;
 }
 
 body {
-  margin-top: 76px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin-top: 76px;
 }
 
 section,
@@ -200,16 +200,15 @@ footer {
 }
 
 .header__container {
-  height: 72px;
-  border-radius: 200px;
-  background: var(--grey-0);
-  box-shadow: 0 0 20px 0 #073b660f, 0 0 4px 0 #073b660a;
-  padding: 12px 12px 12px 8px;
-
   display: grid;
   grid-template-columns: 1fr 48px;
   align-items: center;
   gap: 16px;
+  height: 72px;
+  padding: 12px 12px 12px 8px;
+  background: var(--grey-0);
+  border-radius: 200px;
+  box-shadow: 0 0 20px 0 #073b660f, 0 0 4px 0 #073b660a;
 
   @media (min-width: 992px) {
     height: 80px;
@@ -235,16 +234,15 @@ footer {
 }
 
 .header__burger {
-  width: 48px;
-  height: 48px;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .header__burger img {
@@ -260,13 +258,13 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--grey-0);
   z-index: 1000;
-  transform: translateX(-100%);
-  transition: transform 250ms ease-in-out;
   display: flex;
   flex-direction: column;
   padding-top: 4px;
+  background: var(--grey-0);
+  transform: translateX(-100%);
+  transition: transform 250ms ease-in-out;
 }
 
 .mobile-menu--active {
@@ -274,12 +272,12 @@ footer {
 }
 
 .mobile-menu__header {
-  border-bottom: 1px solid var(--grey-1);
-  padding: 12px 28px 12px 24px;
   display: grid;
   grid-template-columns: 1fr 48px;
   align-items: center;
   gap: 16px;
+  padding: 12px 28px 12px 24px;
+  border-bottom: 1px solid var(--grey-1);
 }
 
 .mobile-menu__logo {
@@ -294,15 +292,15 @@ footer {
 }
 
 .mobile-menu__close {
-  width: 48px;
-  height: 48px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .mobile-menu__close img {
@@ -312,14 +310,14 @@ footer {
 }
 
 .mobile-menu__cta-button {
-  margin: 16px;
   display: block;
-  background: var(--blue-6);
-  color: var(--grey-0);
-  text-decoration: none;
-  text-align: center;
+  margin: 16px;
   padding: 12px 24px;
+  background: var(--blue-6);
   border-radius: 200px;
+  color: var(--grey-0);
+  text-align: center;
+  text-decoration: none;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.6;
@@ -332,15 +330,15 @@ footer {
 }
 
 .mobile-menu__nav {
-  border-top: 1px solid var(--grey-1);
-  padding: 16px;
   flex: 1;
+  padding: 16px;
+  border-top: 1px solid var(--grey-1);
 }
 
 .mobile-menu__nav-list {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .mobile-menu__nav-item {
@@ -348,12 +346,12 @@ footer {
 
 .mobile-menu__nav-link {
   display: block;
+  padding: 10px 12px;
+  color: var(--grey-9);
+  text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.75;
-  color: var(--grey-9);
-  text-decoration: none;
-  padding: 10px 12px;
   transition: color 250ms ease-in-out;
 }
 
@@ -363,21 +361,21 @@ footer {
 }
 
 .mobile-menu__language-link {
-  margin: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: var(--blue-6);
-  text-decoration: none;
-  text-align: center;
+  margin: 16px;
   padding: 8px 24px;
+  background-color: var(--blue-0);
+  border-radius: 12px;
+  color: var(--blue-6);
+  text-align: center;
+  text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.75;
-  background-color: var(--blue-0);
   transition: background-color 250ms ease-in-out;
-  border-radius: 12px;
 }
 
 .mobile-menu__language-link:hover,
@@ -403,11 +401,11 @@ footer {
 .header__nav-link {
   display: block;
   padding: 4px 0;
+  color: var(--grey-9);
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.75;
-  color: var(--grey-9);
   transition: color 250ms ease-in-out;
 }
 
@@ -421,9 +419,9 @@ footer {
   display: flex;
   align-items: center;
   gap: 4px;
-  color: var(--blue-6);
   padding: 8px;
   border-radius: 200px;
+  color: var(--blue-6);
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -437,30 +435,30 @@ footer {
 .header__language-switcher-next-icon {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   left: 8px;
   width: 24px;
   height: 24px;
   opacity: 0;
+  transform: translateY(-50%);
   transition: opacity 150ms ease-in-out, background-color 150ms ease-in-out;
 }
 
 .header__language-switcher span {
-  color: var(--grey-0);
   position: relative;
+  color: var(--grey-0);
   transition: color 150ms ease-in-out;
 }
 
 .header__language-switcher span::before {
-  opacity: 1;
-  color: var(--blue-6);
   content: "UA";
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  display: block;
+  opacity: 1;
+  color: var(--blue-6);
   transition: opacity 150ms ease-in-out;
 }
 
@@ -486,11 +484,11 @@ footer {
 }
 
 .header__cta-button {
-  background-color: var(--blue-6);
-  color: var(--grey-0);
   display: block;
   padding: 10px 20px;
+  background-color: var(--blue-6);
   border-radius: 200px;
+  color: var(--grey-0);
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
