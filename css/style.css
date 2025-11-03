@@ -823,6 +823,14 @@ footer {
 /* Top discount products section styles */
 .top-discount-products {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 96px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 132px;
+  }
 }
 
 .top-discount-products__header {
@@ -910,21 +918,22 @@ footer {
 
 .top-discount-products__list-container {
   position: relative;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 48px;
+  }
 }
 
 .top-discount-products__list-container::before,
 .top-discount-products__list-container::after {
   position: absolute;
-  bottom: 0;
+  top: -10px;
+  bottom: -10px;
   z-index: 2;
   width: 60px;
-  height: 280px;
   content: "";
   pointer-events: none;
-
-  @media screen and (min-width: 768px) {
-    height: 360px;
-  }
 }
 
 .top-discount-products__list-container::before {
@@ -944,13 +953,11 @@ footer {
   justify-content: center;
   gap: 20px;
   width: max-content;
-  margin-bottom: 32px;
   white-space: nowrap;
   transform: translateX(0%);
   animation: scroll 40s linear infinite;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 48px;
     animation-duration: 50s;
   }
 }
@@ -1077,7 +1084,39 @@ footer {
 }
 
 .top-discount-products__cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 200px;
+  background-color: var(--blue-6);
+  color: var(--grey-0);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+  transition: background-color 250ms ease-in-out;
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+  }
+}
+
+.top-discount-products__cta-button:hover,
+.top-discount-products__cta-button:focus {
+  background-color: var(--blue-7);
 }
 
 .top-discount-products__cta-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 250ms ease-in-out;
+}
+
+.top-discount-products__cta-button:hover .top-discount-products__cta-icon,
+.top-discount-products__cta-button:focus .top-discount-products__cta-icon {
+  transform: translateX(4px);
 }
