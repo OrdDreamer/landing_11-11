@@ -946,11 +946,12 @@ footer {
   width: max-content;
   white-space: nowrap;
   transform: translateX(0%);
-  animation: scroll 30s linear infinite;
+  animation: scroll 40s linear infinite;
   margin-bottom: 32px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 48px;
+    animation-duration: 50s;
   }
 }
 
@@ -960,6 +961,7 @@ footer {
   max-width: 280px;
   height: 280px;
   max-height: 280px;
+  transition: transform 250ms ease-in-out;
 
   @media screen and (min-width: 768px) {
     width: 360px;
@@ -967,6 +969,11 @@ footer {
     height: 360px;
     max-height: 360px;
   }
+}
+
+.top-discount-products__item:hover {
+  transform: scale(1.02);
+  z-index: 1;
 }
 
 .top-discount-products__link {
