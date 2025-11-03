@@ -1145,10 +1145,10 @@ footer {
 }
 
 .promo-11-11::after {
-  padding-top: 56%;
   content: "";
   display: block;
   width: 100%;
+  padding-top: 56%;
   background-image: url("/img/section-promo-11-11/mobile_background.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -1161,12 +1161,12 @@ footer {
 }
 
 .promo-11-11__title {
+  margin: 0 0 8px;
   font-weight: 600;
   font-size: 32px;
   line-height: 1.37;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 0 8px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 24px;
@@ -1204,16 +1204,16 @@ footer {
 }
 
 .promo-11-11__description {
-  font-size: 16px;
-  line-height: 1.75;
-  text-align: center;
   margin-bottom: 24px;
   max-width: 832px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.75;
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 48px;
     font-size: 18px;
     line-height: 1.55;
-    margin-bottom: 48px;
   }
 }
 
@@ -1224,8 +1224,8 @@ footer {
 
 .promo-11-11__list {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
   margin-bottom: 24px;
@@ -1240,15 +1240,14 @@ footer {
 }
 
 .promo-11-11__item {
-  padding: 8px 12px;
   display: flex;
   align-items: center;
   gap: 4px;
+  padding: 8px 12px;
   border-radius: 200px;
   overflow: hidden;
-  color: var(--blue-6);
   background-color: var(--blue-1);
-
+  color: var(--blue-6);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
@@ -1286,6 +1285,7 @@ footer {
   justify-content: center;
   gap: 8px;
   width: 100%;
+  margin-bottom: 32px;
   padding: 12px 24px;
   border-radius: 200px;
   background-color: var(--blue-6);
@@ -1295,7 +1295,6 @@ footer {
   font-size: 20px;
   line-height: 1.6;
   transition: background-color 250ms ease-in-out;
-  margin-bottom: 32px;
 
   @media screen and (min-width: 768px) {
     width: auto;
