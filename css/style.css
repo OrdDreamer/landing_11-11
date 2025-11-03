@@ -1120,3 +1120,34 @@ footer {
 .top-discount-products__cta-button:focus .top-discount-products__cta-icon {
   transform: translateX(4px);
 }
+
+/* Promo 11-11 section styles */
+.promo-11-11 {
+}
+
+.promo-11-11__title {
+}
+
+.promo-11-11__title-accent {
+}
+
+.promo-11-11__description {
+}
+
+.promo-11-11__description-accent {
+}
+
+.promo-11-11__subtitle {
+}
+
+.promo-11-11__list {
+}
+
+.promo-11-11__item {
+}
+
+.promo-11-11__cta-button {
+}
+
+.promo-11-11__cta-icon {
+}
