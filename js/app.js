@@ -93,5 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Ініціалізуємо безкінечну прокрутку пропозицій
   createInfiniteScroll('.top-discount-products__list');
   initCarouselAnimation('.top-discount-products__list');
+
+  // Ініціалізуємо безкінечну прокрутку категорій
+  createInfiniteScroll('.how-to-order__categories-list');
+  initCarouselAnimation('.how-to-order__categories-list');
 });
 

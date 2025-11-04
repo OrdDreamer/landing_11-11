@@ -839,11 +839,9 @@ footer {
 
 .top-discount-products__header {
   position: relative;
-  margin-bottom: 32px;
   padding: 4px 0 0;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 48px;
     padding: 24px 0 0;
   }
 
@@ -922,10 +920,12 @@ footer {
 
 .top-discount-products__list-container {
   position: relative;
-  margin-bottom: 32px;
+  max-width: 100%;
+  padding: 32px 0;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 48px;
+    padding: 48px 0;
   }
 }
 
@@ -1352,7 +1352,6 @@ footer {
   align-items: stretch;
   gap: 16px;
   margin: 0;
-  margin-bottom: 16px;
   padding: 0;
   counter-reset: item;
 
@@ -1429,6 +1428,83 @@ footer {
 .how-to-order__item:last-child::after {
   opacity: 1;
   color: #73A8D3;
+}
+
+
+.how-to-order__categories-container {
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 16px;
+  padding: 16px 0;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.how-to-order__categories-container::before,
+.how-to-order__categories-container::after {
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  z-index: 2;
+  width: 60px;
+  pointer-events: none;
+  content: "";
+}
+
+.how-to-order__categories-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--grey-0), transparent);
+}
+
+.how-to-order__categories-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--grey-0), transparent);
+}
+
+
+.how-to-order__categories-list {
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  transform: translateX(0%);
+  animation: scroll 30s linear infinite;
+
+  @media screen and (min-width: 768px) {
+    animation-duration: 20s;
+  }
+}
+
+.how-to-order__categories-item {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.how-to-order__categories-item:hover {
+  z-index: 1;
+  transform: scale(1.02);
+}
+
+.how-to-order__categories-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.how-to-order__categories-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .how-to-order__cta-button {
