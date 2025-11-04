@@ -1830,27 +1830,29 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  gap: 16px;
   justify-content: center;
+  gap: 16px;
+  margin-bottom: 96px;
+  padding: 16px 24px 24px;
   border-radius: 32px;
   overflow: hidden;
-  padding: 16px 24px 24px;
   background: linear-gradient(90deg, #f4f9fd 0%, #dfedf7 49.62%, #f4f9fd 100%);
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr auto;
     gap: 32px;
+    margin-bottom: 132px;
     padding: 0 32px;
   }
 
   @media screen and (min-width: 992px) {
-    padding: 0 48px;
     gap: 64px;
+    padding: 0 48px;
   }
 
   @media screen and (min-width: 1200px) {
-    gap: 48px;
     grid-template-columns: auto 1fr auto;
+    gap: 48px;
   }
 
   @media screen and (min-width: 1408px) {
@@ -1863,11 +1865,11 @@ footer {
   display: block;
   width: 280px;
   height: 280px;
-  content: "";
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  margin: 0 auto;
+  content: "";
 
   @media screen and (min-width: 768px) {
     width: 312px;
@@ -1890,8 +1892,8 @@ footer {
 }
 
 .cta::after {
-  order: -1;
   background-image: url("/img/section-cta/image-2.png");
+  order: -1;
 
   @media screen and (min-width: 768px) {
     order: 1;
@@ -1911,10 +1913,10 @@ footer {
 
 .cta__title {
   margin: 0;
+  text-align: center;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.4;
-  text-align: center;
 }
 
 .cta__title-accent {
