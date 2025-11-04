@@ -1338,12 +1338,76 @@ footer {
 }
 
 .how-to-order__title {
+  position: relative;
+  width: 100%;
   margin: 0;
   margin-bottom: 32px;
   text-align: center;
   font-weight: 500;
   font-size: 32px;
   line-height: 1.37;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 0 32px;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 4px 0 0;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1.4;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 12px 0 8px;
+  }
+
+  @media screen and (min-width: 1408px) {
+    padding: 12px 0 28px;
+  }
+}
+
+.how-to-order__title::before {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  opacity: 0.5;
+  color: var(--blue-1);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 30px;
+  content: "Замовлення";
+  letter-spacing: 0.015em;
+
+  @media screen and (min-width: 576px) {
+    font-size: 70px;
+    line-height: 50px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 91px;
+    line-height: 65px;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 123px;
+    line-height: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 147px;
+    line-height: 104px;
+    letter-spacing: 0.01em;
+  }
+
+  @media screen and (min-width: 1408px) {
+    font-size: 173px;
+    line-height: 124px;
+    letter-spacing: 0.0175em;
+  }
 }
 
 .how-to-order__list {
@@ -1411,13 +1475,11 @@ footer {
     font-size: 154px;
   }
 
-
   @media screen and (min-width: 1200px) {
     bottom: -48px;
     left: 24px;
     font-size: 179px;
   }
-
 
   @media screen and (min-width: 1408px) {
     bottom: -54px;
@@ -1427,9 +1489,8 @@ footer {
 
 .how-to-order__item:last-child::after {
   opacity: 1;
-  color: #73A8D3;
+  color: #73a8d3;
 }
-
 
 .how-to-order__categories-container {
   position: relative;
@@ -1464,9 +1525,7 @@ footer {
   background: linear-gradient(to left, var(--grey-0), transparent);
 }
 
-
 .how-to-order__categories-list {
-
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
