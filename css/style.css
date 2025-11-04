@@ -1318,3 +1318,22 @@ footer {
 .promo-11-11__cta-button:focus .promo-11-11__cta-icon {
   transform: translateX(4px);
 }
+
+/* How to order section styles */
+.how-to-order {
+}
+
+.how-to-order__title {
+}
+
+.how-to-order__list {
+}
+
+.how-to-order__item {
+}
+
+.how-to-order__cta-button {
+}
+
+.how-to-order__cta-icon {
+}
