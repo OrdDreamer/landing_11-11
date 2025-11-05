@@ -662,6 +662,10 @@ footer {
   }
 }
 
+.hero__timer--hidden {
+  display: none;
+}
+
 .hero__timer-item {
   display: flex;
   flex-direction: column;
