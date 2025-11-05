@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const fs = require('fs');
 const path = require('path');
 
@@ -133,6 +134,36 @@ module.exports = (env = {}) => {
           { from: 'css', to: 'css' },
           { from: 'favicon.ico', to: 'favicon.ico' },
         ],
+      }),
+      // Оптимізація зображень
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            plugins: [
+              ['imagemin-mozjpeg', { quality: 80, progressive: true }],
+              ['imagemin-pngquant', { quality: [0.65, 0.8] }],
+              [
+                'imagemin-svgo',
+                {
+                  plugins: [
+                    {
+                      name: 'preset-default',
+                      params: {
+                        overrides: {
+                          removeViewBox: false,
+                          removeUselessStrokeAndFill: false,
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        // Оптимізуємо тільки зображення в папці img
+        include: /img\/.*\.(jpe?g|png|svg)$/i,
       }),
       // Підміна шляхів (якщо basePath встановлено)
       ...(basePath ? [new ReplacePathsPlugin(basePath)] : []),
