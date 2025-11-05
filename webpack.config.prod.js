@@ -22,6 +22,43 @@ const getBasePath = (env = {}) => {
   return '';
 };
 
+// Кастомний плагін для заміни GTM ID плейсхолдера
+class GTMPlugin {
+  constructor(gtmId) {
+    this.gtmId = gtmId;
+  }
+
+  apply(compiler) {
+    compiler.hooks.afterEmit.tap('GTMPlugin', (compilation) => {
+      const outputPath = compilation.outputOptions.path;
+      const htmlFile = path.join(outputPath, 'index.html');
+
+      if (!fs.existsSync(htmlFile)) return;
+
+      let content = fs.readFileSync(htmlFile, 'utf8');
+
+      if (this.gtmId) {
+        // Замінюємо плейсхолдер на реальний GTM ID
+        content = content.replace(/{{GTM_ID}}/g, this.gtmId);
+      } else {
+        // Якщо GTM ID не встановлено, видаляємо GTM теги
+        // Видаляємо GTM скрипт з head
+        content = content.replace(
+          /<!-- Google Tag Manager -->[\s\S]*?<!-- End Google Tag Manager -->\s*/g,
+          ''
+        );
+        // Видаляємо GTM noscript з body
+        content = content.replace(
+          /<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->\s*/g,
+          ''
+        );
+      }
+
+      fs.writeFileSync(htmlFile, content, 'utf8');
+    });
+  }
+}
+
 // Кастомний плагін для заміни абсолютних шляхів у HTML та CSS
 class ReplacePathsPlugin {
   constructor(basePath) {
@@ -94,9 +131,25 @@ class ReplacePathsPlugin {
   }
 }
 
+// Отримуємо GTM ID (з env змінної або webpack env параметра)
+const getGTMId = (env = {}) => {
+  // Перевіряємо GTM_ID змінну середовища
+  if (process.env.GTM_ID) {
+    return process.env.GTM_ID;
+  }
+  
+  // Перевіряємо webpack env параметр
+  if (env && env.gtmId) {
+    return env.gtmId;
+  }
+  
+  return '';
+};
+
 // Отримуємо basePath (webpack передає env як параметр)
 module.exports = (env = {}) => {
   const basePath = getBasePath(env);
+  const gtmId = getGTMId(env);
   
   return merge(common, {
     mode: 'production',
@@ -115,6 +168,8 @@ module.exports = (env = {}) => {
           { from: 'favicon.ico', to: 'favicon.ico' },
         ],
       }),
+      // Замінюємо GTM_ID плейсхолдер (або видаляємо GTM теги, якщо ID не встановлено)
+      new GTMPlugin(gtmId),
       // Підміна шляхів (якщо basePath встановлено)
       ...(basePath ? [new ReplacePathsPlugin(basePath)] : []),
     ],
