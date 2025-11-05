@@ -90,9 +90,7 @@ module.exports = merge(common, {
       patterns: [
         { from: 'img', to: 'img' },
         { from: 'css', to: 'css' },
-        { from: 'js/vendor', to: 'js/vendor' },
         { from: 'favicon.ico', to: 'favicon.ico' },
-        { from: 'robots.txt', to: 'robots.txt' },
       ],
     }),
     ...(basePath ? [new ReplacePathsPlugin(basePath)] : []),
