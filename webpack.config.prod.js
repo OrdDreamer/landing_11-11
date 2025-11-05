@@ -22,41 +22,6 @@ const getBasePath = (env = {}) => {
   return '';
 };
 
-// Кастомний плагін для заміни GTM ID плейсхолдера
-class GTMPlugin {
-  constructor(gtmId) {
-    this.gtmId = gtmId;
-  }
-
-  apply(compiler) {
-    compiler.hooks.afterEmit.tap('GTMPlugin', (compilation) => {
-      const outputPath = compilation.outputOptions.path;
-      const htmlFile = path.join(outputPath, 'index.html');
-
-      if (!fs.existsSync(htmlFile)) return;
-
-      let content = fs.readFileSync(htmlFile, 'utf8');
-
-      if (this.gtmId) {
-        // Замінюємо плейсхолдер на реальний GTM ID
-        content = content.replace(/{{GTM_ID}}/g, this.gtmId);
-      } else {
-        // Якщо GTM ID не встановлено, видаляємо GTM теги
-        content = content.replace(
-          /<!--\s*Google Tag Manager\s*-->[\s\S]*?<!--\s*End Google Tag Manager\s*-->\s*/g,
-          ''
-        );
-        content = content.replace(
-          /<!--\s*Google Tag Manager\s*\(noscript\)\s*-->[\s\S]*?<!--\s*End Google Tag Manager\s*\(noscript\)\s*-->\s*/g,
-          ''
-        );
-      }
-
-      fs.writeFileSync(htmlFile, content, 'utf8');
-    });
-  }
-}
-
 // Кастомний плагін для заміни абсолютних шляхів у HTML та CSS
 class ReplacePathsPlugin {
   constructor(basePath) {
@@ -158,6 +123,9 @@ module.exports = (env = {}) => {
       new HtmlWebpackPlugin({
         template: './index.html',
         publicPath: basePath ? `${basePath}/` : '/',
+        templateParameters: {
+          GTM_ID: gtmId || false,
+        },
       }),
       new CopyPlugin({
         patterns: [
@@ -166,8 +134,6 @@ module.exports = (env = {}) => {
           { from: 'favicon.ico', to: 'favicon.ico' },
         ],
       }),
-      // Замінюємо GTM_ID плейсхолдер (або видаляємо GTM теги, якщо ID не встановлено)
-      new GTMPlugin(gtmId),
       // Підміна шляхів (якщо basePath встановлено)
       ...(basePath ? [new ReplacePathsPlugin(basePath)] : []),
     ],
